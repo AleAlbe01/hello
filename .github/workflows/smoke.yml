@@ -1,0 +1,17 @@
+name: smoke-test
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    name: smoke
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test GitHub Actions
+        run: echo "GitHub Actions works"
+
+      - name: Runner info
+        run: uname -a
